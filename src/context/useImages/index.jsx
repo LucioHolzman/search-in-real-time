@@ -3,7 +3,7 @@ import { fetchImages } from "../../services/pixabay.service";
 export const useImages = () => {
   const [images, setImages] = useState([]);
 
-  const [search, setSearch] = useState("Galaxy");
+  const [search, setSearch] = useState("");
 
   const Images = useCallback(async () => {
     const res = await fetchImages(search);
